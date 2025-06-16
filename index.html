@@ -392,37 +392,108 @@
     </form>
   </section>
 
-  <section id="faqs">
-    <h2>FAQs</h2>
-    <button class="collapsible">What does WW Collab stand for?</button>
-    <div class="content">
-      <p>Worldwide Collab.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQs Section</title>
+<style>
+body {
+    font-family: Arial,sans-serif;
+    margin: 20px;
+}
+.faq-item {
+    margin-bottom: 10px;
+}
+.faq-question {
+    background: #eee;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-size: 1.1em;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.faq-question.active {
+    background: #007bff;
+    color: #ffffff;
+}
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+
+<h1>FAQs</h1>
+
+<div class="faq-item">
+    <button class="faq-question">What does WW Collab stand for?</button>
+    <div class="faq-answer">
+        <p>WW stands for Worldwide. It highlights collaboration across the globe.</p>
     </div>
-    <button class="collapsible">Can brands or designers work with Worldwide Collab?</button>
-    <div class="content">
-      <p>Yes, we love to collaborate with brands, designers, and photographers.</p>
+</div>
+
+<div class="faq-item">
+    <button class="faq-question">Can brands or designers work with Worldwide Collab?</button>
+    <div class="faq-answer">
+        <p>Yes, we collaborate with brands, designers, artists, and innovators from all over the world.</p>
     </div>
-    <button class="collapsible">Who can join Worldwide Collab?</button>
-    <div class="content">
-      <p>Anyone interested in modeling can join, whether experienced or new.</p>
+</div>
+
+<div class="faq-item">
+    <button class="faq-question">Who can join Worldwide Collab?</button>
+    <div class="faq-answer">
+        <p>Anyone with creativity, a unique style, or a passion to collaborate can be a part of us.</p>
     </div>
-    <button class="collapsible">How can I be featured on Worldwide Collab?</button>
-    <div class="content">
-      <p>Send us your portfolio or pictures through our website or social media.</p>
+</div>
+
+<div class="faq-item">
+    <button class="faq-question">How can I be featured on Worldwide Collab?</button>
+    <div class="faq-answer">
+        <p>Follow @ww_collab on Instagram and YouTube, tag us in your post, use #wwcollab, and we may feature you.</p>
     </div>
-    <button class="collapsible">What Is Worldwide Collab?</button>
-    <div class="content">
-      <p>Worldwide Collab is a platform that promotes models and showcases talent and culture.</p>
+</div>
+
+<div class="faq-item">
+    <button class="faq-question">Who is the admin of Worldwide Collab?</button>
+    <div class="faq-answer">
+        <p>Name: Haroon<br>Location: Srinagar(J&K),India.</p>
     </div>
-    <button class="collapsible">Who is the admin of Worldwide Collab?</button>
-    <div class="content">
-      <p>Name: Haroon<br>Location: Srinagar(J&K),India.</p>
+</div>
+
+<div class="faq-item">
+    <button class="faq-question">How can I stay updated?</button>
+    <div class="faq-answer">
+        <p>Follow us on Instagram, subscribe to our YouTube, and watch our stories regularly.</p>
     </div>
-    <button class="collapsible">How can I stay updated?</button>
-    <div class="content">
-      <p>Follow us on social media, YouTube, Instagram , Whatsapp or visit our website for updates.</p>
-    </div>
-  </section>
+</div>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(function (question) {
+    question.addEventListener('click', function () {
+        this.classList.toggle('active');
+        let answer = this.nextElementSibling;
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
 </div>
 
 <!-- Footer -->
